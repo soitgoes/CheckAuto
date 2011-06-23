@@ -1,0 +1,21 @@
+ul.checkauto{
+	list-style-type:none;		
+}
+ul.checkauto li span{
+  background-image:url(images/check.gif);
+  background-repeat:no-repeat;
+  width:16px;
+  height:16px;
+  margin-right:5px;
+  display:inline-block;
+}
+ul.checkauto li.checked span{
+  background-position:-16px;
+}
+ul.checkauto li:hover{
+  background-color:#FFC;
+  cursor:pointer;
+}
+.checkauto_holder{
+  width:100px;  
+}

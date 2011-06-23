@@ -1,0 +1,171 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"file_history":
+	[
+		"/E/working/connect/web/formtest.htm",
+		"/C/Users/Martin/Desktop/jquery.js",
+		"/C/Users/Martin/Desktop/ajaxExtracted/ajax.js",
+		"/C/Users/Martin/Desktop/mailmachine.js",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/hydrant_inspect_create/mustache.html",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/hydrant_inspect_create/selectors/form#hydrant_inspection_form/submit.js",
+		"/E/working/firefighters/FF3/_attachments/script/modules/index.js",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/hydrant_inspect_create/path.txt",
+		"/C/Users/Martin/Desktop/post_data.json",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/hydrant_inspect_create/after.js",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/maint/after.js",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/maint/mustache.html",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/maint/path.txt",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/hydrant_inspect_create/selectors/form#hydrant_inspection_form/ajaxSubmit.js",
+		"/E/working/firefighters/FF3/evently/dashboard_widget/hydrant_inspect_create/submit.js",
+		"/E/working/firefighters/FF3/evently/grid/create/after.js",
+		"/E/working/firefighters/FF3/evently/hydrant_inspection_widget/create/mustache.html",
+		"/E/working/firefighters/FF3/evently/hydrant_inspection_widget/create/data.js",
+		"/E/working/firefighters/FF3/evently/hydrant_inspection_widget/create/after.js",
+		"/E/working/firefighters/FF3/evently/hydrant_inspection_widget/create/path.txt",
+		"/E/working/firefighters/FF3/evently/hydrant_inspection_widget/_init.js",
+		"/E/working/firefighters/FF3/evently/inspection_widget/list/data.js",
+		"/E/working/firefighters/FF3/evently/hydrant_inspection_widget/name.txt",
+		"/E/working/firefighters/FF3/evently/grid/create/path.txt",
+		"/E/working/firefighters/FF3/evently/grid/create/data.js",
+		"/E/working/firefighters/FF3/evently/hydrant_widget/list/selectors/table.grid/_changes/partials/body.html",
+		"/E/working/firefighters/FF3/evently/grid/create/mustache.html",
+		"/E/working/firefighters/FF3/evently/hydrant_widget/list/data.js",
+		"/E/working/firefighters/FF3/evently/hydrant_widget/list/selectors/table.grid/_changes/partials/head.html",
+		"/E/working/firefighters/FF3/evently/hydrant_widget/_init.js",
+		"/E/working/firefighters/FF3/evently/hydrant_widget/name.txt",
+		"/E/working/firefighters/FF3/evently/route_widget/create/selectors/div.waypoint_holder/_changes/after.js",
+		"/E/working/firefighters/FF3/evently/route_widget/create/selectors/div.waypoint_holder/_changes/mustache.html",
+		"/E/working/firefighters/FF3/evently/route_widget/create/mustache.html",
+		"/E/working/firefighters/FF3/evently/hydrant_widget/list/path.txt",
+		"/E/working/firefighters/FF3/evently/route_widget/create/selectors/div.waypoint_holder/_changes/data.js",
+		"/E/working/firefighters/FF3/evently/route_widget/create/before.js",
+		"/E/working/firefighters/FF3/evently/waypoint_widget/_init/selectors/div.waypoint_holder/_changes/after.js",
+		"/E/working/firefighters/FF3/evently/route_widget/create/after.js",
+		"/E/working/firefighters/externals/loadPoints/loadPoints/Program.cs",
+		"/E/working/firefighters/FF3/_attachments/script/forms/file_upload_form.js",
+		"/E/working/firefighters/FF3/evently/waypoint_widget/_init/before.js",
+		"/E/working/firefighters/FF3/evently/waypoint_widget/_init/after.js",
+		"/E/working/firefighters/FF3/lib/forms/form_base.js",
+		"/E/working/firefighters/FF3/evently/step_navigation_widget/incidentChanged/after.js"
+	],
+	"find_in_files":
+	{
+		"include_history":
+		[
+			""
+		],
+		"location_history":
+		[
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hasOwn",
+			"fn.typ",
+			"fn.type =",
+			"type =",
+			"rlocat",
+			"ajaxsetting",
+			"isplainobj",
+			"[^\\(]*(\\(.*\\))[^\\)]*",
+			"triggered",
+			"logo.png",
+			"gps_files",
+			"hasBeenCalle",
+			"calendar.gif"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	{
+		"mount_points":
+		[
+			"/E/working/firefighters"
+		]
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0,
+			1
+		],
+		"rows":
+		[
+			0,
+			1
+		]
+	},
+	"menu_visible": true,
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0,
+		"selected_items":
+		[
+			[
+				"index.js",
+				"FF3/_attachments/script/modules/index.js"
+			]
+		],
+		"width": 0
+	},
+	"select_project":
+	{
+		"height": 500,
+		"selected_items":
+		[
+			[
+				"",
+				"/E/working/firefighters/firefighters.sublime-project"
+			]
+		],
+		"width": 380
+	},
+	"show_minimap": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280,
+	"status_bar_visible": true
+}
