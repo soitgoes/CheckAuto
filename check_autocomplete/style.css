@@ -1,21 +1,32 @@
-ul.checkauto{
-	list-style-type:none;		
+ul.checkauto {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  font-size: 10px;
+  overflow: auto;
+  overflow-x:hidden;
+  height: 300px;
 }
-ul.checkauto li span{
-  background-image:url(images/check.gif);
-  background-repeat:no-repeat;
-  width:16px;
-  height:16px;
-  margin-right:5px;
-  display:inline-block;
+ul.checkauto li span {
+  background-image: url(images/check16.gif);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  display: inline-block;
 }
-ul.checkauto li.checked span{
-  background-position:-16px;
+ul.checkauto li.checked span {
+  background-position: -16px;
 }
-ul.checkauto li:hover{
-  background-color:#FFC;
-  cursor:pointer;
+ul.checkauto li:hover {
+  background-color: #FFC;
+  cursor: pointer;
 }
-.checkauto_holder{
-  width:100px;  
+.checkauto_div {
+  width: 116px;
+  
+}
+.checkauto_div input[type=text] {
+  width: 116px;
 }

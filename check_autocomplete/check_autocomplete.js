@@ -54,7 +54,7 @@
     searchField.keyup(function () {
       var searchValue = this.value;
       $("li", ul).each(function () {
-        if (this.innerText.indexOf(searchValue) < 0) {
+        if (this.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) < 0) {
           $(this).hide();
         } else {
           $(this).show();
