@@ -1,3 +1,19 @@
+ROADMAP:  Add keyboard support
+
+Example:
+ var basicOptions = { 
+        data: ["Inbox", "Trash", "Receipts", "TODO"], 
+        selected: ["Inbox", "Trash"],
+        title: "Select a Label", 
+        beforeCheck: function(result){alert("before checked: " + JSON.stringify(result));},
+        afterCheck: function(result){ alert("after checked: " + JSON.stringify(result));},
+        open: function(){ alert("im opening");},
+        close:function(){alert("im closing")}
+      };
+      $("#basic_check_field").checkauto(basicOptions);
+
+
+
 The MIT X11 License covers libraries in the LoveSeat project. 
 Some third party libraries come from different projects, and
 are licensed under their own terms.
