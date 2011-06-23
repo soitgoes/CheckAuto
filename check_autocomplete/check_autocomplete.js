@@ -28,19 +28,28 @@
     var btn = $("<input type='button' value='" + title + "' />");
     var currentValue = selected === undefined ? [] : selected;
     var holder = $("<div class='checkauto_div' style='display:none'>");
-    btn.click(function () {
-      if (!holder.is(":visible")){
+    var open = function(){
         if (args.open && typeof args.open == "function"){
           args.open();
         }
         holder.show();  
-      }else{
+    };
+    var close = function(){
         if (args.close  && typeof args.close == "function"){
           args.close();
         }
         holder.hide();        
+    }
+    var showHideToggle = function () {
+      if (!holder.is(":visible")){
+        open();
+      }else{
+        close();
       }
-    });
+    };
+    //$(":not(div.checkauto_div)").click(function(){close(); return false;}); //TODO figure out how to make this behave properly
+    btn.click(showHideToggle);
+
       var searchForm = $("<form class='checkauto_search_form'></form>");
       var searchField = $("<input type='text' class='checkauto_search' />");
       searchField.click(function () { this.select(); });

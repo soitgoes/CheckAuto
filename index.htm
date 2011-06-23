@@ -22,20 +22,20 @@
         title: "Select a Label", 
         beforeCheck: function(result){alert("before checked: " + JSON.stringify(result));},
         afterCheck: function(result){ alert("after checked: " + JSON.stringify(result));},
-        open: function(){ alert("im opening");},
-        close:function(){alert("im closing")}
+       // open: function(){ alert("im opening");},
+       // close:function(){alert("im closing")}
       };
       $("#basic_check_field").checkauto(basicOptions);
 
 
       var keyValueOptions ={ 
           data: [
-              { key: "Inbox", value: 1 }, 
-              { key: "Trash", value: 2 }, 
-              { key: "Receipts", value: 3 }, 
-              { key: "TODO", value: 4}
+              { key: "Inbox", value: "1" }, 
+              { key: "Trash", value: "2" }, 
+              { key: "Receipts", value: "3" }, 
+              { key: "TODO", value: "4"}
             ], 
-        selected: [1, 3] };
+        selected: ["1", "3"] };
       $("#keyval_check_field").checkauto(keyValueOptions);
     });
   </script>
