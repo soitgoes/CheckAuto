@@ -7,6 +7,32 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "$.fn.checkauto = function () {\n  var data = arguments[0];\n  var selected = arguments[1];\n  var elements = this;\n  //todo: check to see if data is array or key value pair\n\n  //setup both as key value pair\n  //if array\n  var keyvalue = [];\n  $.each(data, function () {\n    keyvalue.push({ key: this.toString(), value: this.toString() });\n  });\n\n\n\n  $.each(elements, function () {\n    var currentValue = [];\n    var hiddenValueElement = this;\n    var ul = $(\"<ul class='checkauto'></ul>\");\n    $.each(keyvalue, function () {\n      var li = $(\"<li>\" + this.key + \"</li>\");\n      var value= this.value\n      li.click(function () {\n        if (li.attr(\"class\") == \"checked\"){\n          li.removeClass(\"checked\");\n          var index = currentValue.indexOf(value);\n          currentValue = jQuery.grep(currentValue, function(item){return item != value;});\n        }else{\n          li.addClass(\"checked\");\n          currentValue.push(value);\n        }\n        alert(JSON.stringify(currentValue));\n        hiddenValueElement.value = currentValue.join(\",\");\n      });\n      ul.append(li);\n    })\n    $(this).after(ul);\n  });\n  //create ul with elements\n\n  //create search box \n\n  //if selected is defined then populate the checked status\n\n}",
+			"file": "/E/working/check_autocomplete/js/check_autocomplete.js",
+			"settings":
+			{
+				"buffer_size": 1230,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "ul.checkauto{\n	list-style-type:none;	\n	background-image:url(;\n}",
+			"file": "/E/working/check_autocomplete/style.css",
+			"settings":
+			{
+				"buffer_size": 63,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/working/check_autocomplete/index.htm",
+			"settings":
+			{
+				"buffer_size": 615,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"file_history":
@@ -104,14 +130,95 @@
 	{
 		"mount_points":
 		[
-			"/E/working/firefighters"
+			"/E/working/check_autocomplete"
 		]
 	},
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/E/working/check_autocomplete/js/check_autocomplete.js",
+					"settings":
+					{
+						"buffer_size": 1230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/working/check_autocomplete/style.css",
+					"settings":
+					{
+						"buffer_size": 63,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/E/working/check_autocomplete/index.htm",
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 144,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -166,6 +273,6 @@
 	"show_minimap": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 280,
+	"side_bar_width": 110,
 	"status_bar_visible": true
 }

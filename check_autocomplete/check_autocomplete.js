@@ -6,10 +6,6 @@
   var selected = arguments[1];
   var elements = this;
   var keyvalue = [];
-  //todo: check to see if data is array or key value pair
-
-  //setup both as key value pair
-  //if array
   if (data.length < 0) {
     return;
   }
@@ -20,8 +16,10 @@
   } else {
     keyvalue = data;
   }
+  if (typeof JSON !== "undefined") { //ie7 compatibility
+    log("selected: " + JSON.stringify(selected));
+  }
 
-  log("selected: " + JSON.stringify(selected));
 
   $.each(elements, function () {
     var currentValue = selected === undefined ? [] : selected;
@@ -29,10 +27,11 @@
     var hiddenValueElement = this;
     var searchForm = $("<form class='checkauto_search_form'></form>");
     var searchField = $("<input type='text' class='checkauto_search' />");
+    searchField.click(function () { this.select(); });
     searchForm.append(searchField);
     var ul = $("<ul class='checkauto'></ul>");
     $.each(keyvalue, function () {
-      var li = $("<li><span></span>" + this.key + "</li>");
+      var li = $("<li><span class='check_item'></span><span>" + this.key + "</span></li>");
       if ($.inArray(this.value, currentValue) > -1) {
         li.addClass("checked");
       }
@@ -40,13 +39,14 @@
       li.click(function () {
         if (li.attr("class") == "checked") {
           li.removeClass("checked");
-          var index = currentValue.indexOf(value);
           currentValue = jQuery.grep(currentValue, function (item) { return item != value; });
         } else {
           li.addClass("checked");
           currentValue.push(value);
         }
-        log("Autocheck value altered: " + JSON.stringify(currentValue));
+        if (typeof JSON !== "undefined") {
+          log("Autocheck value altered: " + JSON.stringify(currentValue));
+        }
         hiddenValueElement.value = currentValue.join(",");
       });
       ul.append(li);

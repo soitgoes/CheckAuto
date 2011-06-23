@@ -1,23 +1,32 @@
 ul.checkauto {
   list-style-type: none;
-  padding: 0;
+  padding: 0  0 5px 0;  
   margin: 0;
   font-family: Arial;
   font-size: 10px;
-  overflow: auto;
-  overflow-x:hidden;
-  height: 300px;
+  max-height: 60px;
 }
-ul.checkauto li span {
-  background-image: url(images/check16.gif);
+ul.checkauto li{
+  padding-left:5px;
+  margin-top:3px;
+  margin-bottom:3px;
+}
+ul.checkauto li span{
+  margin:0;
+  padding:0;
+}
+ul.checkauto li span.check_item {
+  background-image: url(images/check12.gif);
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   margin-right: 5px;
   display: inline-block;
+  clear:both;
+  float:left;
 }
-ul.checkauto li.checked span {
-  background-position: -16px;
+ul.checkauto li.checked span.check_item {
+  background-position: -12px;
 }
 ul.checkauto li:hover {
   background-color: #FFC;
@@ -25,8 +34,11 @@ ul.checkauto li:hover {
 }
 .checkauto_div {
   width: 116px;
-  
+  background-color:#eee;
+  border:solid 1px #000;
 }
 .checkauto_div input[type=text] {
-  width: 116px;
+  width:114px;
+  padding:0;
+  margin:0;
 }
