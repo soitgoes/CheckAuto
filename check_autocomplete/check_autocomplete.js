@@ -2,8 +2,10 @@
   var log = function (message) {
     if (console) { console.log(message) };
   };
-  var data = arguments[0];
-  var selected = arguments[1];
+  var args = arguments[0];
+  var data = args.data;
+  var selected = args.selected;
+  var title = args.title === undefined ? "Select One" : args.title;
   var elements = this;
   var keyvalue = [];
   if (data.length < 0) {
@@ -22,49 +24,74 @@
 
 
   $.each(elements, function () {
-    var currentValue = selected === undefined ? [] : selected;
-    var holder = $("<div class='checkauto_div'>");
     var hiddenValueElement = this;
-    var searchForm = $("<form class='checkauto_search_form'></form>");
-    var searchField = $("<input type='text' class='checkauto_search' />");
-    searchField.click(function () { this.select(); });
-    searchForm.append(searchField);
-    var ul = $("<ul class='checkauto'></ul>");
-    $.each(keyvalue, function () {
-      var li = $("<li><span class='check_item'></span><span>" + this.key + "</span></li>");
-      if ($.inArray(this.value, currentValue) > -1) {
-        li.addClass("checked");
+    var btn = $("<input type='button' value='" + title + "' />");
+    var currentValue = selected === undefined ? [] : selected;
+    var holder = $("<div class='checkauto_div' style='display:none'>");
+    btn.click(function () {
+      if (!holder.is(":visible")){
+        if (args.open && typeof args.open == "function"){
+          args.open();
+        }
+        holder.show();  
+      }else{
+        if (args.close  && typeof args.close == "function"){
+          args.close();
+        }
+        holder.hide();        
       }
-      var value = this.value
-      li.click(function () {
-        if (li.attr("class") == "checked") {
-          li.removeClass("checked");
-          currentValue = jQuery.grep(currentValue, function (item) { return item != value; });
-        } else {
-          li.addClass("checked");
-          currentValue.push(value);
-        }
-        if (typeof JSON !== "undefined") {
-          log("Autocheck value altered: " + JSON.stringify(currentValue));
-        }
-        hiddenValueElement.value = currentValue.join(",");
-      });
-      ul.append(li);
-    })
-    searchField.keyup(function () {
-      var searchValue = this.value;
-      $("li", ul).each(function () {
-        if (this.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) < 0) {
-          $(this).hide();
-        } else {
-          $(this).show();
-        }
-      });
     });
-    holder.append(searchForm);
-    holder.append(ul);
-    $(this).after(holder);
+      var searchForm = $("<form class='checkauto_search_form'></form>");
+      var searchField = $("<input type='text' class='checkauto_search' />");
+      searchField.click(function () { this.select(); });
+      searchForm.append(searchField);
+      var ul = $("<ul class='checkauto'></ul>");
+      $.each(keyvalue, function () {
+        var li = $("<li><span class='check_item'></span><span>" + this.key + "</span></li>");
+        if ($.inArray(this.value, currentValue) > -1) {
+          li.addClass("checked");
+        }
+        var value = this.value
+        li.click(function () {
+          if (args.beforeCheck && typeof args.beforeCheck == "function"){
+            args.beforeCheck(currentValue);
+          }
+          if (li.attr("class") == "checked") {
+            li.removeClass("checked");
+            currentValue = jQuery.grep(currentValue, function (item) { return item != value; });
+          } else {
+            li.addClass("checked");
+            currentValue.push(value);
+          }
+          if (typeof JSON !== "undefined") {
+            log("Autocheck value altered: " + JSON.stringify(currentValue));
+          }
+          hiddenValueElement.value = currentValue.join(",");
+          if (args.afterCheck && typeof args.afterCheck == "function"){
+            args.afterCheck(currentValue);
+          }
+        });
+        ul.append(li);
+      })
+      searchField.keyup(function () {
+        var searchValue = this.value;
+        $("li", ul).each(function () {
+          if (this.innerText.toLowerCase().indexOf(searchValue.toLowerCase()) < 0) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          }
+        });
+      });
+
+      holder.append(searchForm);
+      holder.append(ul);
+      
+      $(this).after(holder);
+    
+    $(this).after(btn);
   });
+
   //create ul with elements
 
   //create search box 
