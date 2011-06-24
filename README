@@ -1,4 +1,5 @@
 ROADMAP:  Add keyboard support
+Better default design css
 
 Example:
  var basicOptions = { 
